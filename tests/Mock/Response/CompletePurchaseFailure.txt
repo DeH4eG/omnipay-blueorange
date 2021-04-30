@@ -1,0 +1,5 @@
+HTTP/1.1 400 Bad Request
+Server: nginx
+Content-Type: application/json
+
+{"purchase":{"products":[{"price":{"message":"A valid integer is required.","code":"invalid"}},{}]}}

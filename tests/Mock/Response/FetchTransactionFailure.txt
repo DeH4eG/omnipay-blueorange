@@ -1,0 +1,6 @@
+HTTP/1.1 400 Bad Request
+Server: nginx
+Content-Type: application/json
+Content-Length: 71
+
+{"__all__":[{"message":"invalid_uuid","code":"invalid purchase UUID"}]}
