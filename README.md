@@ -2,6 +2,8 @@
 
 Omnipay BlueOrange Gateway is a payment processing library for PHP. It's based on [Omnipay package](https://github.com/thephpleague/omnipay)
 
+[![Latest Stable Version](https://poser.pugx.org/deh4eg/omnipay-blueorange/v)](//packagist.org/packages/deh4eg/omnipay-blueorange) [![Total Downloads](https://poser.pugx.org/deh4eg/omnipay-blueorange/downloads)](//packagist.org/packages/deh4eg/omnipay-blueorange) [![Latest Unstable Version](https://poser.pugx.org/deh4eg/omnipay-blueorange/v/unstable)](//packagist.org/packages/deh4eg/omnipay-blueorange) [![License](https://poser.pugx.org/deh4eg/omnipay-blueorange/license)](//packagist.org/packages/deh4eg/omnipay-blueorange)
+
 ## Installation
 
 Omnipay is installed via [Composer](https://getcomposer.org/). To install, simply require `league/omnipay` and `deh4eg/omnipay-blueorange` with Composer:
