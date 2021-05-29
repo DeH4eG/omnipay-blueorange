@@ -2,14 +2,14 @@
 
 namespace Omnipay\BlueOrange\Message\Request;
 
-use Omnipay\Common\Exception\InvalidRequestException;
-use Omnipay\Common\Message\ResponseInterface;
 use Omnipay\BlueOrange\Contracts\ClientInterface;
 use Omnipay\BlueOrange\Contracts\PurchaseDetailsInterface;
 use Omnipay\BlueOrange\Entity\ClientEntity;
 use Omnipay\BlueOrange\Entity\PurchaseDetailsEntity;
 use Omnipay\BlueOrange\Message\AbstractRequest;
 use Omnipay\BlueOrange\Message\Response\PurchaseResponse;
+use Omnipay\Common\Exception\InvalidRequestException;
+use Omnipay\Common\Message\ResponseInterface;
 
 /**
  * Class PurchaseRequest
@@ -58,6 +58,11 @@ class PurchaseRequest extends AbstractRequest
     private const PARAMETER_KEY_CANCEL_REDIRECT = 'cancel_redirect';
 
     /**
+     * @var string
+     */
+    private const PARAMETER_KEY_REFERENCE = 'reference';
+
+    /**
      * @inheritDoc
      */
     public function getEndpointMethod(): string
@@ -78,9 +83,10 @@ class PurchaseRequest extends AbstractRequest
                 ->toArray(),
             self::PARAMETER_KEY_PURCHASE => $this->getPurchase()
                 ->toArray(),
+            self::PARAMETER_KEY_REFERENCE => $this->getReference(),
             self::PARAMETER_KEY_FAILURE_REDIRECT => $this->getFailureRedirect(),
             self::PARAMETER_KEY_SUCCESS_REDIRECT => $this->getSuccessRedirect(),
-            self::PARAMETER_KEY_CANCEL_REDIRECT => $this->getCancelRedirect()
+            self::PARAMETER_KEY_CANCEL_REDIRECT => $this->getCancelRedirect(),
         ];
 
         return array_merge($purchaseData, parent::getData());
@@ -100,6 +106,14 @@ class PurchaseRequest extends AbstractRequest
     public function getPurchase(): PurchaseDetailsInterface
     {
         return $this->getParameter(self::PARAMETER_KEY_PURCHASE);
+    }
+
+    /**
+     * @return string
+     */
+    private function getReference(): string
+    {
+        return (string)$this->getParameter(self::PARAMETER_KEY_REFERENCE);
     }
 
     /**
@@ -150,6 +164,15 @@ class PurchaseRequest extends AbstractRequest
         }
 
         return $this->setParameter(self::PARAMETER_KEY_PURCHASE, $purchaseDetails);
+    }
+
+    /**
+     * @param string $reference
+     * @return PurchaseRequest
+     */
+    public function setReference(string $reference): PurchaseRequest
+    {
+        return $this->setParameter(self::PARAMETER_KEY_REFERENCE, $reference);
     }
 
     /**
