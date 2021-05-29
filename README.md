@@ -57,6 +57,7 @@ $options = [
             ]
         ]
     ],
+    'reference' => '#1234', // (optional) Max length: 128
     'success_redirect' => 'https://www.example.com/success/',
     'failure_redirect' => 'https://www.example.com/failure/',
     'cancel_redirect' => 'https://www.example.com/cancel/' // (optional)

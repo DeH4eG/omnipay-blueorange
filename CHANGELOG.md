@@ -6,9 +6,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.1.0] - 2021-05-29
+### Added
+-  Add opportunity to set custom reference number on purchase request
+
 ## [1.0.0] - 2021-04-30
 ### Added
 - Initial release
 
-[Unreleased]: https://github.com/DeH4eG/omnipay-blueorange/compare/v1.0.0...HEAD
+[Unreleased]: https://github.com/DeH4eG/omnipay-blueorange/compare/v1.1.0...HEAD
+[1.1.0]: https://github.com/DeH4eG/omnipay-blueorange/releases/tag/v1.1.0
 [1.0.0]: https://github.com/DeH4eG/omnipay-blueorange/releases/tag/v1.0.0
