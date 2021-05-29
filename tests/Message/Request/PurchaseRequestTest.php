@@ -25,6 +25,7 @@ class PurchaseRequestTest extends AbstractRequestTest
         $parameters = [
             'client' => $this->createClientEntityMock(),
             'purchase' => $this->createPurchaseEntityMock(),
+            'reference' => uniqid("#"),
             'success_redirect' => '',
             'failure_redirect' => ''
         ];
@@ -34,6 +35,7 @@ class PurchaseRequestTest extends AbstractRequestTest
 
         self::assertArrayHasKey('client', $purchaseRequestData);
         self::assertArrayHasKey('purchase', $purchaseRequestData);
+        self::assertArrayHasKey('reference', $purchaseRequestData);
         self::assertArrayHasKey('success_redirect', $purchaseRequestData);
         self::assertArrayHasKey('success_redirect', $purchaseRequestData);
         self::assertContains('purchases', $purchaseRequest->getEndpointMethod());
