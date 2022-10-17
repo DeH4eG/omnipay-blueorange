@@ -10,5 +10,4 @@ use Omnipay\BlueOrange\Contracts\Helper\ArrayableInterface;
  */
 interface ProductBagInterface extends ArrayableInterface
 {
-
 }

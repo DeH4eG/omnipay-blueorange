@@ -12,7 +12,7 @@ Omnipay is installed via [Composer](https://getcomposer.org/). To install, simpl
 
 ## API docs
 
-BlueOrange Gateway API documentation you can find [here](https://gateway.blueorangebank.com/api/)
+BlueOrange Gateway API documentation you can find [here](https://gateway.bluorbank.lv/api/)
 
 ## Usage
 

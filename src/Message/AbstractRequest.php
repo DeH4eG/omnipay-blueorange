@@ -20,7 +20,7 @@ abstract class AbstractRequest extends OmnipayAbstractRequest
     /**
      * @var string
      */
-    private const ENDPOINT_URL = 'https://gateway.blueorangebank.com/api/v1';
+    private const ENDPOINT_URL = 'https://gateway.bluorbank.lv/api/v1';
 
     /**
      * @var string
